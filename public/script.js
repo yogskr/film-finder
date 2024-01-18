@@ -50,7 +50,7 @@ const getMovieInfo = async (movie) => {
   try {
     const response = await fetch(urlToFetch);
     if (response.ok) {
-      const jsonResponse = await.response.json()
+      const jsonResponse = await response.json();
       const movieInfo = jsonResponse;
       return movieInfo;
     }
@@ -61,7 +61,7 @@ const getMovieInfo = async (movie) => {
 
 // Gets a list of movies and ultimately displays the info of a random movie from the list
 const showRandomMovie = async () => {
-  const movieInfo = document.getElementById("movieInfo");
+  const movieInfo = document.getElementById('movieInfo');
   if (movieInfo.childNodes.length > 0) {
     clearCurrentMovie();
   }
